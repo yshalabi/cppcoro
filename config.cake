@@ -322,7 +322,8 @@ elif cake.system.isLinux() or cake.system.isDarwin():
 
   # Configure optimised-specific settings here
   compiler = clangOptimisedVariant.tools["compiler"]
-  compiler.addCppFlag('-O3')
+  #compiler.addCppFlag('-O3')
+  compiler.addCppFlag('-O1')
   compiler.addCppFlag('-g')
   
   # Only use link-time optimisation if we're using LLD
